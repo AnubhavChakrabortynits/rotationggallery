@@ -1,0 +1,127 @@
+body{
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    background-color: rgb(15, 14, 14);
+    overflow: hidden;
+    position: relative;
+}
+
+.container{
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.6s
+}
+.container span{
+    position: absolute;
+    top:0px;
+    left:0px;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+    width: 100%;
+    box-shadow: 2px 2px 5px ;
+    
+}
+.container span img{
+    position: absolute;
+    left: 0px;
+    top:0px;
+    width: 100%;
+}
+.btncont{
+    position: relative;
+    width: 80%;
+    
+}
+.btncont button{
+    position: absolute;
+    bottom: -80px;
+    background-color: purple;
+    color: aliceblue;
+    border: 2px double yellow;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.btn:hover{
+filter: brightness(1.5);
+
+}
+#prev{
+    left:20%
+}
+#next{
+    right:20%
+}
+
+
+@media only screen and (max-width:600px){
+    body{
+        margin:0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        justify-content: center;
+        background-color: rgb(15, 14, 14);
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .container{
+        min-width: 70px;
+        height: 70px;
+        transform-style: preserve-3d;
+        transform: perspective(1000px) rotateY(0deg);
+        transition: transform 0.6s
+    }
+    .container span{
+        position: absolute;
+        top:0px;
+        left:0px;
+        transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+        width: 100%;
+        box-shadow: 2px 2px 5px ;
+        
+    }
+    .container span img{
+        position: absolute;
+        left: 20px;
+        top:0px;
+        width: 80%;
+    }
+    .btncont{
+        position: relative;
+        width: 80%;
+        
+    }
+    .btncont button{
+        position: absolute;
+        bottom: -80px;
+        background-color: purple;
+        color: aliceblue;
+        border: 2px double yellow;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    
+    }
+    .btn:hover{
+    filter: brightness(1.5);
+    
+    }
+    #prev{
+        left:10%
+    }
+    #next{
+        right:10%
+    }
+    
+}
